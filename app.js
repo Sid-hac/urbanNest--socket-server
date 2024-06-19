@@ -3,7 +3,7 @@ import {Server} from "socket.io"
 
 const io = new Server({
     cors:{
-        origin:"https://urbannnest.netlify.app"
+        origin: process.env.CLIENT_URL
     }
 })
 

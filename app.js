@@ -1,13 +1,17 @@
 
+import { config } from 'dotenv';
+config();
 import {Server} from "socket.io"
 
 const io = new Server({
     cors:{
-        origin:  "https://urbannnest.netlify.app"
+        origin: process.env.CLIENT_URL
     }
 })
 
+
 const port = process.env.PORT || 4000
+
 
   let onlineUsers = [];
  
